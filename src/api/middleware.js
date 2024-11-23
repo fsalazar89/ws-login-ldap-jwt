@@ -1,7 +1,7 @@
 class Middleware {
   autenticacion = (req, res, next) => {
     try {
-      req.headers.authorization === `Bearer ${process.env.APITOKEN}`
+      req.headers.authorization === `Bearer ${process.env.TOKEN_AUTHORIZATION}`
         ? next()
         : res.status(200).json({ mensaje: "No Autorizado" });
     } catch (err) {

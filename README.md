@@ -10,7 +10,7 @@ Servicio que permite validar en el directorio activo el usuario y las contraseñ
 
 - Crea un archivo con el nombre `.env` en la raíz del proyecto, en este archivo se deben almacenar las variables de entorno necesarias para el proyecto.
 - PORT_APP
-- APITOKEN
+- TOKEN_AUTHORIZATION
 - SECRET_TOKEN_JWT
 - LADP_SERVIDOR
 - LADP_DN
