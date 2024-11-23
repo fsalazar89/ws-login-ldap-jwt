@@ -1,0 +1,27 @@
+{
+  "name": "servicio_login_ldap",
+  "version": "1.0.0",
+  "description": "Servicio que permite validar en el directorio activo el usuario y las contraseña de un usuario de red, si las credenciales son correctar muestra un mesnaje exitoso y genera un token de jsonwebtoken",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "docker_build": "sudo docker build --no-cache --progress=plain -t login-ldap-jwt .",
+    "docker_start": "sudo docker run -d -e PORT=8046 -p 8046:8046 --name 'login-ldap-jwt' login-ldap-jwt",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "ldapjs": "^2.3.3",
+    "moment": "^2.30.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
